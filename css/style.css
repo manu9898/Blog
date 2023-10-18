@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+.wrapper.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+
+}
+
+input[type="text"], input[type="email"], textarea {
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    padding: 5px;
+}
+
+button {
+    width: 100px;
+    font-size: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: #bb5a3a;
+    color: #f9f0ed;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: black;
+}
+
+.image:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+    background-color: red;
+    overflow: hidden;
+
+}
+
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hoverElements {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.hoverElements::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #bb5a3a;
+    transition: width 0.5s;
+}
+
+.hoverElements:hover::before {
+    width: 100%;
+}
+
+.menu:hover .hoverElements::before {
+    width: 0;
+}
+
+.menu .hoverElements:hover::before {
+    width: 100%;
+}
+.hoverIcone:hover{
+    color: #bb5a3a;
+}
+
+.hoverTxt:hover{
+    color: #bb5a3a;
+}
+

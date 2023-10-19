@@ -33,33 +33,37 @@
     </section>
 
     <section style="position: relative">
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px">
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); gap: 20px">
 
-            <div><img  src="pictures/minh-pham-MBsReSZ2WNM-unsplash.jpg" alt="" style="object-fit: cover; width: 100%; height: 80%;"></div>
-            <img src="pictures/sarah-khan-8MJqNBSymRE-unsplash.jpg" alt="" style="object-fit: cover; width: 100%; height: 80%;">
-            <img src="pictures/vinicius-amnx-amano-17NCG_wOkMY-unsplash.jpg" alt="" style="object-fit: cover; width: 100%; height: 80%;">
+            <div class="imageFirstSection"><img  src="pictures/minh-pham-MBsReSZ2WNM-unsplash.jpg" alt="" style="object-fit: cover; width: 100%; height: 80%;"></div>
+            <div class="imageFirstSection"><img src="pictures/sarah-khan-8MJqNBSymRE-unsplash.jpg" alt="" style="object-fit: cover; width: 100%; height: 80%;"></div>
+            <div class="imageFirstSection"><img src="pictures/vinicius-amnx-amano-17NCG_wOkMY-unsplash.jpg" alt="" style="object-fit: cover; width: 100%; height: 80%;"></div>
 
         </div>
-        <div style="position: absolute;  bottom:17% ; left:40% ; background-color: white ; width: 20vw "><p style="text-align: center; font-size: larger">Ma vie. Mon blog.</p></div>
+        <div class="absolute-container">
+            <div class="maVieMonBlog" style="background-color: white; width: 20vw; position: absolute; bottom: 17%; left: 40%;">
+                <p style="text-align: center; font-size: larger">Ma vie. Mon blog.</p>
+            </div>
+        </div>
     </section>
 
+    <div class="imageSecondSection" style="display:flex; justify-content: space-around; flex-wrap: wrap; min-height: 300px">
 
-
-    <section>
-        <div style="display:grid ; grid-template-columns: 1fr 3fr 1fr 3fr 1fr; min-height: 300px; ">
-            <div></div>
             <div>
-                <div style="display: flex; gap: 10px;  margin-bottom: 20px;border: solid lightgray 1px;">
-                    <img style="width: 100%; height:auto; max-height: 300px" src="pictures/vinicius-amnx-amano-17NCG_wOkMY-unsplash.jpg">
+                <div>
+                    <div style="display: flex; gap: 10px;  margin-bottom: 20px;border: solid lightgray 2px;">
+                        <img style="width: 50%; height:auto; max-height: 300px" src="pictures/vinicius-amnx-amano-17NCG_wOkMY-unsplash.jpg">
                         <div style="display: grid; align-self: center">
                             <p style="font-size: 12px; font-family: cursive">4 déc. 2022 2 Min</p>
                             <p style="font-size: 16px; font-weight: bold">Title</p>
                             <p style="font-size: 12px; font-weight: lighter">Lorem ipsum dolor sit amet,<br>  consectetur adipisicing elit.Maiores.</p>
                         </div>
+                    </div>
                 </div>
+
                 <div>
-                    <div style="display: flex; gap: 10px; margin-bottom: 20px;border: solid lightgray 1px;">
-                        <img style="width: 100%; height:auto; max-height: 300px" src="pictures/vinicius-amnx-amano-17NCG_wOkMY-unsplash.jpg">
+                    <div style="display: flex; gap: 10px; margin-bottom: 20px;border: solid lightgray 2px;">
+                        <img style="width: 50%; height:auto; max-height: 300px" src="pictures/picturesInGridBox/thea-hdc-5phQtLNovB8-unsplash.jpg">
                         <div style="display: grid; align-self: center">
                             <p style="font-size: 12px; font-family: cursive">4 déc. 2022 2 Min</p>
                             <p style="font-size: 16px; font-weight: bold">Title</p>
@@ -68,8 +72,8 @@
                     </div>
                 </div>
                 <div>
-                    <div style="display: flex; gap: 10px; margin-bottom: 20px;border: solid lightgray 1px;">
-                        <img style="width: 100%; height:auto; max-height: 300px" src="pictures/vinicius-amnx-amano-17NCG_wOkMY-unsplash.jpg">
+                    <div style="display: flex; gap: 10px; margin-bottom: 20px;border: solid lightgray 2px;">
+                        <img style="width: 50%; height:auto; max-height: 300px" src="pictures/picturesInGridBox/manja-vitolic-7tOV35hnkao-unsplash.jpg">
                         <div style="display: grid; align-self: center">
                             <p style="font-size: 12px; font-family: cursive">4 déc. 2022 2 Min</p>
                             <p style="font-size: 16px; font-weight: bold">Title</p>
@@ -79,10 +83,25 @@
                 </div>
             </div>
 
-            <div></div>
-                <div style="background-color: #fcf6f5; ;padding: 50px">
+
+                <div id="divfForm"  class="flex-items" style="background-color: #fcf6f5; width: 30% ;padding: 50px">
                     <div style="; display: flex; justify-content: center; align-items: center">
-                        <img src="pictures/minh-pham-MBsReSZ2WNM-unsplash.jpg" alt="" style="object-fit: cover; width: 90%; height: 90%;">
+                        <div style="width: 100%; text-align: center;  background-color: #bb5a3a; padding: 50px">
+                            <p style="color: white; font-size: 28px">Pour recevoir
+                            toute mon actu
+                            </p>
+
+                            <form style=" padding-bottom: 100px" action="/ma-page-de-traitement" method="post">
+                                    <div style="display: flex; flex-direction: column; margin-right: 10px; text-align: center">
+                                        <label style="display: flex; justify-content: left; color:white;" for="mail">E-mail</label>
+                                        <div style="display:flex; justify-content: left;" ><input type="email" id="mailInputForm" name="user_mail" /></div>
+
+                                    </div>
+                                    <div style="display: flex ; justify-content: center ;padding-top: 50px">
+                                        <button>S'abonner</button>
+                                    </div>
+                            </form>
+                        </div>
                     </div>
                     <p style="text-align: center; font-weight: bold; font-size: 20px">Suivez moi sur Instagram</p>
                     <div style="display: grid ; grid-template-columns: 1fr 1fr 1fr;  gap:10px;  " >
@@ -103,12 +122,12 @@
             </div>
 
         </div>
-            <div></div>
+
         </div>
     </section>
     <section style=" padding-top: 100px ; ">
 
-        <div style="display: flex ; justify-content: center; background-color: #fcf6f5; padding-top: 40px; padding-bottom: 40px ; font-size: 32px">Dis moi ce que tu en penses</div>
+        <div style="display: flex ; justify-content: center; background-color: #fcf6f5; padding-top: 40px; padding-bottom: 40px ; font-size: 32px;">Dis moi ce que tu en penses</div>
         <div style="display: grid ;grid-template-columns: 1fr 1fr 1fr; background-color: #fcf6f5">
                 <div></div>
                 <div>

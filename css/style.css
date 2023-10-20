@@ -4,13 +4,13 @@ body{
 
 }
 
-.wrapper.scrolled {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
 
+
+.wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 2; /* Assurez-vous que le z-index est supérieur à celui de vos images ou de tout autre élément. */
+    background-color: #fff; /* Définissez la couleur d'arrière-plan souhaitée */
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -29,14 +29,24 @@ input[type="text"], input[type="email"], textarea {
 
 }
 
-button {
+.buttonForm {
     width: 100px;
     font-size: 20px;
     padding-bottom: 15px;
     padding-top: 15px;
     background-color: #bb5a3a;
     color: #f9f0ed;
-    transition: background-color 0.3s;
+    transition: background-color 0.7s;
+}
+
+#buttonSubscribe{
+    padding: 15px;
+    background-color: transparent;
+    color: white;
+}
+#buttonSubscribe:hover{
+    background-color: black;
+    transition: 0.7s;
 }
 
 button:hover {
@@ -117,7 +127,12 @@ button:hover {
     .maVieMonBlog {
         visibility: hidden;
     }
+}
 
-
+@media screen and (max-width: 500px) {
+    input[type="text"], input[type="email"], textarea {
+        border-bottom: 2px solid #000; /* Ajustez l'épaisseur de la bordure selon vos préférences */
+        padding: 10px; /* Ajustez la taille de la police selon vos préférences */
+    }
 }
 
